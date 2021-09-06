@@ -7,7 +7,13 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "",
+        url: "http://menno.michalmu.vot.pl/graphql",
+        protocol: `http`,
+        includedRoutes: [
+          '**/posts',
+          '**/tags',
+          '**/categories'
+        ]
       },
     },
     "gatsby-plugin-sass",
